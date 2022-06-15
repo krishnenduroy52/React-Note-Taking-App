@@ -1,22 +1,35 @@
 # Note Taking app using react
 
-1. Fetches input form user's Local Stroage
+1. Fetches Data form user's Local Stroage
 
    ```
    useState(() => {
 		const savedNotes = JSON.parse(
-			localStorage.getItem('react-notes-app-data')
+			localStorage.getItem(KEY_NAME)
 		);
     console.log(savedNotes);
 		if (savedNotes != null) {
 			setNotes(savedNotes);
 		} 
 	});
-  ```
--Display all notes iterating throughout the array
--Store that input in localStorage in an array
--User can also search notes
+  
+2. Display all notes iterating throughout the array
+3. Store that input in localStorage in an array
+	```
+	useEffect(() => {
+		localStorage.setItem(
+			KEY_NAME,
+			JSON.stringify(notes)
+		);
+	}, [notes]);
+	```
+4. search notes
+	- Simple, by filtering the Notes array.
+	```
+	<Notes notes={notes.filter((note) => note.text.toLowerCase().includes(serachItem))} handelAddnote={addNote} handelDeleteNote={deleteNote}/>
+	```
 
-Run the code
+
+## Run the code
 >npm install
 >npm start
