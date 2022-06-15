@@ -4,7 +4,7 @@
 
 ## Website Link
 
-[Take-Note Website](takenotebro.netlify.app)
+[Take-Note Website](https://takenotebro.netlify.app/)
 
 <hr>
 
