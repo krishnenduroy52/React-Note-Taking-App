@@ -1,5 +1,4 @@
 import React from 'react';
-import Delete from './Delete'
 import deleteimg from './img/Delete.png'
 
 const note = ({ id, text, date, handelDeleteNote }) => {
