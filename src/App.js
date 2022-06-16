@@ -60,7 +60,7 @@ function App() {
   return (
     <div className="App">
       <Nav handelSeachNote={setSearchItem}/>
-      <Notes notes={notes.filter((note) => note.text.toLowerCase().includes(serachItem))} handelAddnote={addNote} handelDeleteNote={deleteNote}/>
+      <Notes notes={notes.filter((note) => note.text.toLowerCase().includes(serachItem.toLowerCase()))} handelAddnote={addNote} handelDeleteNote={deleteNote}/>
     </div>
   );
 }
